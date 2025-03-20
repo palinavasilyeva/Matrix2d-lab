@@ -20,5 +20,16 @@ namespace Matrix2dTest
             Assert.AreEqual(3, m.C);
             Assert.AreEqual(4, m.D);
         }
+
+        [TestMethod]
+        public void Konstruktor_BezArgumentow_PoprawneDane_OK()
+        {
+            var m = new Matrix2d();
+            // Assert
+            Assert.AreEqual(1, m.A);
+            Assert.AreEqual(0, m.B);
+            Assert.AreEqual(0, m.C);
+            Assert.AreEqual(1, m.D);
+        }
     }
 }
