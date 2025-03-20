@@ -80,8 +80,18 @@ public class Matrix2d
                         -matrix._b,
                         -matrix._c,
                         -matrix._d);
-
     #endregion
 
+    #region Konwersje
+    //konwersja jawna z Matrix2d na int[,]
+    public static explicit operator int[,](Matrix2d m)
+       => new int[,] {{ m._a, m._b }, { m._c, m._d } };
+
+    //konwersja niejawna z int[,] na Matrix2d
+    public static implicit operator Matrix2d(int[,] m)
+        => new Matrix2d(m[0, 0], m[0, 1], m[1, 0], m[1, 1]);
+    #endregion
 }
+
+
 
