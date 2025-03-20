@@ -6,7 +6,7 @@ namespace Matrix2dTest
     public sealed class Test1
     {
         [TestMethod]
-        public void Konstructor_Wieloargumentowy_Poprawnie_OK()
+        public void Konstructor_Wieloargumentowy_PoprawnieDane_OK()
         {
             //Arrange
             var m = new Matrix2d(1, 2, 3, 4);
