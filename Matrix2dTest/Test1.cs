@@ -205,10 +205,8 @@ namespace Matrix2dTest
         public void Test_Static_Determinant()
         {
             var m = new Matrix2d(1, 2, 3, 4);
-            var result1 = m.A * m.D;
-            var result2 = m.B * m.C;
-            var result3 = result1 - result2;
-            Assert.AreEqual(-2, result3);
+            var m1 = Matrix2d.Determinant(m);
+            Assert.AreEqual(-2, m1);
         }
 
         [TestMethod]
