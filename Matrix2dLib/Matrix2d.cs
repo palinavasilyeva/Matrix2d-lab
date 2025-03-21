@@ -107,7 +107,7 @@ public class Matrix2d
         return _a * _d - _b * _c;
     }
     
-    public static Matrix2d Parse(string s)
+    
     
 }
 
