@@ -194,10 +194,11 @@ namespace Matrix2dTest
         public void Test_Static_Transpose()
         {
             var m1 = new Matrix2d(1, 2, 3, 4);
-            Assert.AreEqual(1, m1.A);
-            Assert.AreEqual(3, m1.B);
-            Assert.AreEqual(2, m1.C);
-            Assert.AreEqual(4, m1.D);
+            var m = Matrix2d.Transpose(m1);
+            Assert.AreEqual(1, m.A);
+            Assert.AreEqual(3, m.B);
+            Assert.AreEqual(2, m.C);
+            Assert.AreEqual(4, m.D);
         }
 
         [TestMethod]
@@ -207,7 +208,13 @@ namespace Matrix2dTest
             var result1 = m.A * m.D;
             var result2 = m.B * m.C;
             var result3 = result1 - result2;
-            Assert.AreEqual(0, m1.A);
+            Assert.AreEqual(-2, result3);
+        }
+
+        [TestMethod]
+        public void Test_Static_Det()
+        {
+            
         }
     }
 }
