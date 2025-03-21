@@ -178,5 +178,16 @@ namespace Matrix2dTest
             Assert.AreEqual(x * m2.C, m3.C);
             Assert.AreEqual(x * m2.D, m3.D);
         }
+        
+        [TestMethod]
+        public void Test_Operator_Negate()
+        {
+            var m1 = new Matrix2d(1, 2, 3, 4);
+            var m2 = -m1;
+            Assert.AreEqual(-1, m2.A);
+            Assert.AreEqual(-2, m2.B);
+            Assert.AreEqual(-3, m2.C);
+            Assert.AreEqual(-4, m2.D);
+        }
     }
 }
