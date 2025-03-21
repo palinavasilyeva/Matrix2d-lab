@@ -164,7 +164,7 @@ namespace Matrix2dTest
         }
         
         [TestMethod]
-        public void Test_Operator_Multiply_Matrix_Right()
+        public void Test_Multiply_Number_Right_Operatort()
         {
             var x = 2;
             var m2 = new Matrix2d(1, 2, 3, 4);
@@ -188,6 +188,26 @@ namespace Matrix2dTest
             Assert.AreEqual(-2, m2.B);
             Assert.AreEqual(-3, m2.C);
             Assert.AreEqual(-4, m2.D);
+        }
+
+        [TestMethod]
+        public void Test_Static_Transpose()
+        {
+            var m1 = new Matrix2d(1, 2, 3, 4);
+            Assert.AreEqual(1, m1.A);
+            Assert.AreEqual(3, m1.B);
+            Assert.AreEqual(2, m1.C);
+            Assert.AreEqual(4, m1.D);
+        }
+
+        [TestMethod]
+        public void Test_Static_Determinant()
+        {
+            var m = new Matrix2d(1, 2, 3, 4);
+            var result1 = m.A * m.D;
+            var result2 = m.B * m.C;
+            var result3 = result1 - result2;
+            Assert.AreEqual(0, m1.A);
         }
     }
 }
