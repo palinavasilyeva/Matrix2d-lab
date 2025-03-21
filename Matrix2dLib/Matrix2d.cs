@@ -109,6 +109,7 @@ public class Matrix2d
 
     public static Matrix2d Parse(string str)
     {
+        str = str.Replace("[", "").Replace("]", "");
         var parts = str.Split(',');
         if (parts.Length != 4)
             throw new FormatException("Matrix2d is not a valid matrix format");

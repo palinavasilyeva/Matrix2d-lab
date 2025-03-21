@@ -29,5 +29,8 @@ namespace Matrix2dTest
             Assert.AreEqual(0, m.C);
             Assert.AreEqual(1, m.D);
         }
+        
+        [TestMethod]
+        public void 
     }
 }
