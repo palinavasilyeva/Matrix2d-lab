@@ -75,11 +75,11 @@ public class Matrix2d
                         right._c * left,
                         right._d * left);
 
-    public static Matrix2d operator -(Matrix2d matrix)
-        => new Matrix2d(-matrix._a,
-                        -matrix._b,
-                        -matrix._c,
-                        -matrix._d);
+    public static Matrix2d operator -(Matrix2d m)
+        => new Matrix2d(-m._a,
+                        -m._b,
+                        -m._c,
+                        -m._d);
     #endregion
 
     #region Konwersje
